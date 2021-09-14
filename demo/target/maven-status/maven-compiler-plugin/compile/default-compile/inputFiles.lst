@@ -1,0 +1,17 @@
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\HttpRequest.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\DemoApplication.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\RabbitProducer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\config\RabbitConfig.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\controller\RabbitMqController.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\TopicAConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\TopicBConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\FanoutCConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\TopicCConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\dao\UserMapper.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\FanoutAConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\DemoQueueConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\mq\FanoutBConsumer.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\controller\UserController.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\service\UserService.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\config\WxPayUtil.java
+C:\Users\Administrator\IdeaProjects\springbootdemo-master\demo\src\main\java\com\example\springboot\demo\config\SwaggerConfig.java

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.springboot.demo.dao.UserMapper">
+<select id="getUser" resultType="com.example.springbootdemoentity.entity.User">
+    SELECT * from user where OpenId = #{OpenId}
+</select>
+    <select id="getOrderId" resultType="com.example.springbootdemoentity.entity.Order">
+        SELECT * from orderr where OrderId = #{orderId}
+    </select>
+    <select id="Login" resultType="com.example.springbootdemoentity.entity.Admin">
+        SELECT * from admin where UserName = #{UserName} and Password=#{Password}
+    </select>
+    <insert id="setOrder">
+    INSERT INTO orderr (OrderId,OrderState,OrderPhone,OrderTime,Address,AllPrice,Name,Id,isUp,Note,Room,Prices)
+        values(#{OrderId},"no",#{OrderPhone},#{OrderTime},#{Address},#{AllPrice},#{Name},#{OpenId},#{isUp},#{Note},#{Room},#{Prices})
+</insert>
+    <select id="getAllUserOrder" resultType="com.example.springbootdemoentity.entity.Order">
+        SELECT * from orderr where Id = #{OpenId}
+    </select>
+    <insert id="addUser">
+    INSERT INTO user (UserId,OpenId)
+        values(null,#{OpenId})
+</insert>
+    <insert id="addAddress">
+    INSERT INTO address (OpenIdA,AddressA,RoomA,OrderPhoneA,OrderName)
+        values(#{OpenId},#{Address},#{Room},#{OrderPhone},#{OrderName})
+</insert>
+    <update id="updateAddress">
+         UPDATE address SET AddressA = #{Address},RoomA=#{Room},OrderPhoneA=#{OrderPhone},OrderName=#{OrderName} WHERE AddressA = #{Addressb} and OpenIdA=#{OpenId} and RoomA = #{Roomb} and OrderPhoneA=#{OrderPhoneb} and OrderName=#{OrderNameb}
+     </update>
+    <delete id="delAddress">
+        DELETE FROM address WHERE AddressA = #{Address} and OpenIdA=#{OpenId}
+    </delete>
+    <update id="achieveOrder">
+         UPDATE orderr SET OrderState = "yes" WHERE OrderId=#{OrderId}
+     </update>
+    <update id="updatePwd">
+         UPDATE admin SET Password = #{PasswordNew} WHERE Password = #{Password} and UserName=#{UserName}
+     </update>
+    <update id="delOrder">
+         UPDATE orderr SET OrderState = "del" WHERE OrderId=#{OrderId}
+     </update>
+    <update id="cencelOrder">
+         UPDATE orderr SET OrderState = "cencel" WHERE OrderId=#{OrderId}
+     </update>
+    <update id="updateLimit">
+         UPDATE limits SET size = #{size}
+     </update>
+    <update id="updateannounce">
+         UPDATE announce SET announceN = #{announce}
+     </update>
+    <update id="updateAvailable">
+         UPDATE available SET todayStart = #{todayStart},todayEnd=#{todayEnd}
+</update>
+    <update id="upadtePrice">
+         UPDATE price SET up = #{up} ,down=#{down},cosup=#{cosup},cosdown=#{cosdown} WHERE weight=#{weight}
+     </update>
+    <select id="getAllOrderDayly" resultType="com.example.springbootdemoentity.entity.Order">
+        SELECT * from orderr where OrderTime = #{day}
+    </select>
+    <select id="getAllOrder" resultType="com.example.springbootdemoentity.entity.Order">
+        SELECT * from orderr
+    </select>
+    <select id="getdefaut" resultType="com.example.springbootdemoentity.entity.Price">
+        SELECT * from price
+    </select>
+    <select id="getlimit" resultType="String">
+        SELECT * from limits
+    </select>
+    <select id="getannounce" resultType="String">
+        SELECT * from announce
+    </select>
+    <select id="getAvailable" resultType="com.example.springbootdemoentity.entity.Available">
+        SELECT * from available
+    </select>
+    <select id="findAddress" resultType="com.example.springbootdemoentity.entity.Address">
+        SELECT * from address where OpenIdA=#{OpenId}
+    </select>
+</mapper>
